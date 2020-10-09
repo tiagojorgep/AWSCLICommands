@@ -31,6 +31,28 @@ List all cloudfront distributions
 $ aws cloudfront list-distributions
 ```
 
+**Get specific distribution by domain name**<br />
+Get a specific distibution info by domain name<br />
+<br />
+First enable cloudfront preview stage.
+```sh
+$ aws configure set preview.cloudfront true
+```
+After preview is enabled, just run command bellow.
+```sh
+$ aws cloudfront list-distributions --query "DistributionList.Items[].{DomainName: DomainName, OriginDomainName: Origins.Items[0].DomainName, Id: Id, ARN: ARN, DNS: Aliases.Items[0]}[?contains(OriginDomainName, 'your.domain.com')] | [0]"
+```
+This command will return a data like bellow:
+```
+{
+    "ARN": "arn:aws:cloudfront::XPTOID:distribution/DISTRIBUITIONID",
+    "DNS": "your.domain.com",
+    "DomainName": "d81fy57puwt1i.cloudfront.net",
+    "Id": "DISTRIBUITIONID",
+    "OriginDomainName": "your.domain.com.s3-website-sa-east-1.amazonaws.com"
+}
+```
+
 **Create invalidate**<br />
 Create a invalidate request to a cloudfront distribution
 ```sh
