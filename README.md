@@ -47,7 +47,7 @@ This command will return a data like bellow:
 {
     "ARN": "arn:aws:cloudfront::XPTOID:distribution/DISTRIBUITIONID",
     "DNS": "your.domain.com",
-    "DomainName": "d81fy57puwt1i.cloudfront.net",
+    "DomainName": "xptoid.cloudfront.net",
     "Id": "DISTRIBUITIONID",
     "OriginDomainName": "your.domain.com.s3-website-sa-east-1.amazonaws.com"
 }
