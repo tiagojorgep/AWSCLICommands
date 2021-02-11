@@ -2,6 +2,15 @@
 Contain AWS CLI commons commands<br />
 For complete AWS CLI documentation follow: [AWS CLI Command Reference](https://docs.aws.amazon.com/cli/latest/index.html)
 
+Profiles Commands
+-------------
+
+**List Profiles**<br />
+List all profiles registered in your computer.
+```sh
+$ aws configure list-profiles
+```
+
 S3 Commands
 -------------
 
