@@ -67,3 +67,10 @@ Create a invalidate request to a cloudfront distribution
 ```sh
 $ aws cloudfront create-invalidation --distribution-id <distribution-id> --paths "/*"
 ```
+
+Cognito Commands
+-------------
+**Set UserPool UI Customization**<br />
+Customize the CSS of an app client in a User Pool.<br />
+```
+$ aws cognito-idp set-ui-customization --user-pool-id <user-pool-id> --client-id <client-id> --css "< your CSS plain text here, without line breaks >" --image-file fileb://< your logo path here >>
