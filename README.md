@@ -28,6 +28,7 @@ $ aws s3 sync <folder-path> s3://<bucket-name>
 
 **Sync Bucket with public read access**<br />
 Sync all content into a folder to a S3 Bucket granting public read access
+> :warning: This command will make your data public readable, be careful and if you don't sure, don't use it.
 ```sh
 $ aws s3 sync <folder-path> s3://<bucket-name> --acl public-read
 ```
