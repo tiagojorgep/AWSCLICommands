@@ -75,3 +75,18 @@ Cognito Commands
 Customize the CSS of an app client in a User Pool.<br />
 ```
 $ aws cognito-idp set-ui-customization --user-pool-id <user-pool-id> --client-id <client-id> --css "< your CSS plain text here, without line breaks >" --image-file fileb://< your logo path here >>
+```
+
+EC2 Commands
+-------------
+**List/describe images in MarketPlace**<br />
+Describe one or more images in marketplace that match with filter parameters<br />
+```
+$ aws ec2 describe-images --owners aws-marketplace --filters Name=name,Values="*<my key word>*"
+```
+
+**Launch EC2**<br />
+Launch EC2 instances with keypair, Security Group and Subnet
+```
+$ aws ec2 run-instances --image-id <AMI id> --count <number of instances> --instance-type <type of instance> --key-name <keypair name> --security-group-ids <sg id> --subnet-id <subnet-id>
+```
